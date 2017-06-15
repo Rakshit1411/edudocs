@@ -33,8 +33,7 @@ public class signUp extends AppCompatActivity {
     private ProgressBar progressBar;
     private FirebaseAuth auth;
     public static FirebaseUser user;
-    RadioGroup user_type;
-    RadioButton typer,def;
+
     int count=0;
     public static String userType_signUp;
     @Override
@@ -52,19 +51,8 @@ public class signUp extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
 
-       // def = (RadioButton)findViewById(R.id.Student1);
-      //  def.setSelected(true);
-       // user_type.check(def.getId());
-      /*  user_type.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int id = user_type.getCheckedRadioButtonId();
-                typer = (RadioButton)findViewById(id);
 
-                userType_signUp = typer.getText().toString();
-            }
-        });
-        */btnResetPassword.setOnClickListener(new View.OnClickListener() {
+        btnResetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), forgot_password.class));

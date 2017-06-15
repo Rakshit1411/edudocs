@@ -17,6 +17,7 @@
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackground"
     android:longClickable="true"
+
     android:transitionName="@string/transition"
     card_view:cardCornerRadius="10dp"
     card_view:cardElevation="10dp"
@@ -25,7 +26,8 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <ImageView
             android:id="@+id/imageView2"
