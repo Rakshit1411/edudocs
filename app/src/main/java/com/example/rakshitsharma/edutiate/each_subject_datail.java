@@ -70,6 +70,7 @@ public class each_subject_datail extends AppCompatActivity implements overview.O
         setContentView(R.layout.activity_each_subject_datail);
         mFragmentManager = getSupportFragmentManager();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         mysfg = new SimpleFingerGestures();
         View view = View.inflate(getApplicationContext(), R.layout.activity_each_subject_datail,null);
         mysfg.setOnFingerGestureListener(new SimpleFingerGestures.OnFingerGestureListener() {
@@ -128,17 +129,7 @@ public class each_subject_datail extends AppCompatActivity implements overview.O
     public void onFragmentInteraction(Uri uri) {
 
     }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId()==android.R.id.home) {
-            startActivity(new Intent(getApplicationContext(),batchdetailsactivity.class));
-            getCurrentFocus().setTransitionName("trans");
-            finish();
 
-            return true;
-        }
-            return false;
-    }
     @Override
     public void onBackPressed() {
         //getCurrentFocus().setTransitionName("trans");

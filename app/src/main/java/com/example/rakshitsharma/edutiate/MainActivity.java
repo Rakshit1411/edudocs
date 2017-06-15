@@ -5,12 +5,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.transition.Fade;
+import android.support.transition.TransitionManager;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 
 import com.example.rakshitsharma.edutiate.Chatting.ChatDialogsActivity;
 import com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home;
@@ -18,11 +21,13 @@ import com.example.rakshitsharma.edutiate.Settings.settingsFragment;
 import com.example.rakshitsharma.edutiate.notifications.DummyContent;
 import com.example.rakshitsharma.edutiate.notifications.notification;
 
+
 public class MainActivity extends AppCompatActivity implements settingsFragment.OnFragmentInteractionListener,notification.OnListFragmentInteractionListener,my_batches_in_home.OnFragmentInteractionListener {
 
 
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
+    public static ViewGroup v2;
     String user,password;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -32,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements settingsFragment.
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                 {
+                    Fade fade = new Fade();
+                    fade.setDuration(300);
+                    TransitionManager.beginDelayedTransition(v2,fade);
                     FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
                     xfragmentTransaction.replace(R.id.content,new my_batches_in_home()).commit();
 
@@ -39,14 +47,18 @@ public class MainActivity extends AppCompatActivity implements settingsFragment.
                 }
 
                 case R.id.navigation_dashboard:
-                {
+                { Fade fade = new Fade();
+                    fade.setDuration(500);
+                    TransitionManager.beginDelayedTransition(v2,fade);
                     FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
                     xfragmentTransaction.replace(R.id.content,new settingsFragment()).commit();
 
                     return true;
                 }
                 case R.id.navigation_notifications:
-                {
+                { Fade fade = new Fade();
+                    fade.setDuration(500);
+                    TransitionManager.beginDelayedTransition(v2,fade);
                     FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
                     xfragmentTransaction.replace(R.id.content,new notification()).commit();
                     return true;
@@ -70,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements settingsFragment.
         getSupportActionBar().setDisplayUseLogoEnabled(true);
         user = getIntent().getStringExtra("email");
         password = getIntent().getStringExtra("password");
+        v2 = (ViewGroup)findViewById(R.id.content);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.action_bar_icon);
         xfragmentTransaction.replace(R.id.content,new my_batches_in_home()).commit();

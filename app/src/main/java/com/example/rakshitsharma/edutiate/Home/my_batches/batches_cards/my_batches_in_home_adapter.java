@@ -2,6 +2,8 @@ package com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.support.transition.Fade;
+import android.support.transition.TransitionManager;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +16,8 @@ import com.example.rakshitsharma.edutiate.R;
 import com.example.rakshitsharma.edutiate.Home.my_batches.batchdetailsactivity;
 
 import java.util.ArrayList;
+
+import static com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home.v1;
 
 
 /**
@@ -65,6 +69,9 @@ public static int title;
                       //      ActivityOptionsCompat.makeSceneTransitionAnimation((Activity)itemView.getContext(), viewStart,v.getTransitionName());
                     //Intent intent = new Intent(itemView.getContext(),batchdetailsactivity.class);
                    //itemView.getContext().startActivity(intent,options.toBundle());
+                    Fade fade = new Fade();
+                    fade.setDuration(2000);
+                    TransitionManager.beginDelayedTransition(v1,fade);
                     Intent intent = new Intent(itemView.getContext(),batchdetailsactivity.class);
                     itemView.getContext().startActivity(intent);
 

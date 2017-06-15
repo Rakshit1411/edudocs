@@ -33,6 +33,8 @@ public class my_batches_in_home extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
+    public static ViewGroup v1;
+
     private RecyclerView.LayoutManager mLayoutManager;
     private static String LOG_TAG = "RecyclerViewActivity";
 
@@ -43,7 +45,7 @@ public class my_batches_in_home extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     public my_batches_in_home() {
-        // Required empty public constructor
+        // Required empty public constructorfinal
     }
 
     /**
@@ -85,6 +87,7 @@ public class my_batches_in_home extends Fragment {
         mAdapter = new my_batches_in_home_adapter(getDataSet());
         mRecyclerView.setAdapter(mAdapter);
 
+        v1 = (ViewGroup)v.findViewById(R.id.recycler_view);
 
         return v;
     }
