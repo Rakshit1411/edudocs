@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="materialviewpager-1.2.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/6426d3c85d14078c66cd5605046d622c711a9daa/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/6426d3c85d14078c66cd5605046d622c711a9daa/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.florent37/materialviewpager/1.2.1/cbecd23cfe90fa7fec34b9c3cdddac92b0e1fb07/materialviewpager-1.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

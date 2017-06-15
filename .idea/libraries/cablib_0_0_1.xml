@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="cablib-0.0.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/0270ac6c5aeb8a2a31fe5becf2570e45426a8e84/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/0270ac6c5aeb8a2a31fe5becf2570e45426a8e84/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/in.arjsna/cablib/0.0.1/bc792cd1d48a1a72ddeaacafc6ca07bfd8658f55/cablib-0.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
