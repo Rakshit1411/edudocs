@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "102587677704",
+    "firebase_url": "https://login-to-edutiate.firebaseio.com",
+    "project_id": "login-to-edutiate",
+    "storage_bucket": "login-to-edutiate.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102587677704:android:289b037af8ed05f0",
+        "android_client_info": {
+          "package_name": "com.example.rakshitsharma.edutiate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102587677704-jc1dlo3c19cc0ntl0tv8ld0ls1ggv1bv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rakshitsharma.edutiate",
+            "certificate_hash": "afaa169b21aed9fe724fc3ee8ad068172a3534c0"
+          }
+        },
+        {
+          "client_id": "102587677704-emjmb2h79dhp3pap27nad6ns5m0fc33o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr12JFmzLnutiStSBtDb4Zt05hsfKIJzA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102587677704-emjmb2h79dhp3pap27nad6ns5m0fc33o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

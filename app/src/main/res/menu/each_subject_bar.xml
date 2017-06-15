@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/overview"
+        android:icon="@drawable/overview"
+        android:title="Overview" />
+
+    <item
+        android:id="@+id/content"
+        android:icon="@drawable/content"
+        android:title="Content" />
+
+
+    <item
+        android:id="@+id/announcements"
+        android:icon="@drawable/ic_announcement_black_36dp"
+        android:title="Announcements" />
+
+
+    <item
+        android:id="@+id/discussion"
+        android:icon="@drawable/discussions"
+        android:title="Discussion" />
+
+</menu>

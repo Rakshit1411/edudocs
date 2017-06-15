@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.RecyclerView android:id="@+id/list"
+    android:name="com.example.rakshitsharma.edutiate.notification"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="16dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="#ECEFF1"
+
+    android:visibility="visible"
+    tools:context="com.example.rakshitsharma.edutiate.notifications.notification"
+    tools:listitem="@layout/fragment_item"
+    android:layout_weight="4.93"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    </android.support.v7.widget.RecyclerView>

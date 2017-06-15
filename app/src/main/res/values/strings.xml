@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Edutiate</string>
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Hello Students</string>
+    <string name="slide_1_desc">The easiest way to learn and explore</string>
+
+    <string name="slide_2_title">Helping hand for teachers</string>
+    <string name="slide_2_desc">An interactive way to teach</string>
+
+    <string name="slide_3_title">Great Discounts</string>
+    <string name="slide_3_desc">Best discounts on every single service we offer!</string>
+    <string name="transition">hello</string>
+    <string name="slide_4_title">World Travel</string>
+    <string name="slide_4_desc">Book tickets of any transportation and travel the world!</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+    <string name="Overview">Overview</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_chat">chat</string>
+    <string name="large_text">
+        "Edutiate" the name itself is derived from two words initiate and educate.
+        \nWe are an organisation working to impart wisdom in a country that promises a lot. Education in the modern day world is tending to shift towards generalization which we believe is not effective and needs to be changed. \nEdutiate introduces a new platform where it is possible to initiate education in a manner that was never done before. We focus on developing a social platform where education meets fun.
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_about_the_team">about_the_team</string>
+    <string name="title_activity_batch_details_view_pager">batch_details_view_pager</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_batch_pager">batch_pager</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_each_subject_datail">each_subject_datail</string>
+    <string name="title_dashboard">Dashboard</string>
+</resources>
