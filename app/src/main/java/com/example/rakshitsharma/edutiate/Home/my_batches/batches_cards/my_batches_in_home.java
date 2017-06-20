@@ -112,7 +112,7 @@ public static int index;
     public static ArrayList names;
     public static ArrayList subjects;
     public static ArrayList descrip;
-    public static String col[] = new String[10];
+    public static String col[] = new String[17];
     public static ArrayList institution;
     private ArrayList<my_batches_in_home_object> getDataSet() {
         ArrayList results = new ArrayList<my_batches_in_home_object>();
@@ -126,16 +126,24 @@ public static int index;
         institution.add("Institution: Thapar");
         institution.add("Institution: COE-7");
 
-        col[0]="#c62828";
-        col[1]="#ad1457";
-        col[2]="#6a1b9a";
-        col[3]="#4527a0";
-        col[4]="#1565c0";
-        col[5]="#0277bd";
-        col[6]="#00695c";
-        col[7]="#2e7d32";
-        col[8]="#ef6c00";
-        col[9]="#4e342e";
+        col[0]="#955170";
+        col[1]="#43698f";
+        col[2]="#48A360";
+        col[3]="#77917a";
+        col[4]="#b07a7f";
+        col[5]="#5277A8";
+        col[6]="#60605C";
+        col[7]="#2D7D8F";
+        col[8]="#60605C";
+        col[9]="#B08C54";
+        col[10]="#BE2D61";
+        col[11]="#7E7D42";
+        col[12]="#228A92";
+        col[13]="#A53D3D";
+        col[14]="#575D80";
+        col[15]="#5A6ABA";
+        col[16]="#A68572";
+
 
         for(int i=0;i<no_of_batches;i++)
         {

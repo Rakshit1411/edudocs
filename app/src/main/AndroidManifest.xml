@@ -65,8 +65,11 @@
         <activity
             android:name=".Chatting.ChatDialogsActivity"
             android:theme="@style/AppTheme1" />
-        <activity android:name=".Chatting.ListUsersActivity"
-            android:theme="@style/AppTheme1" ></activity>
+        <activity
+            android:name=".Chatting.ListUsersActivity"
+            android:theme="@style/AppTheme1" />
+        <activity android:name=".website"
+            android:theme="@style/AppTheme1"></activity>
     </application>
 
 </manifest>

@@ -122,7 +122,9 @@ public static int title;
         cv = (CardView)view.findViewById(R.id.card_view);
         ColorGenerator generator = ColorGenerator.MATERIAL;
         int randomColor = generator.getRandomColor();
-        cv.setCardBackgroundColor(randomColor);
+        Random rand = new Random();
+        int x = rand.nextInt(17);
+        cv.setCardBackgroundColor(Color.parseColor(col[x]));
 
 
         DataObjectHolder dataObjectHolder = new DataObjectHolder(view);

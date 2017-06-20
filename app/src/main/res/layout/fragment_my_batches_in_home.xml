@@ -4,7 +4,7 @@
     android:id="@+id/v"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#dddddd"
+    android:background="#ffffff"
     android:elevation="0dp"
     tools:context=".Home.my_batches.batches_cards.my_batches_in_home">
 
