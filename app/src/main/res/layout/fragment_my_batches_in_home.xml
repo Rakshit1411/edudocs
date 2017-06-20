@@ -1,11 +1,11 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/v"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:elevation="0dp"
-android:id="@+id/v"
     android:background="#dddddd"
+    android:elevation="0dp"
     tools:context=".Home.my_batches.batches_cards.my_batches_in_home">
 
     <!-- TODO: Update blank fragment layout -->
@@ -13,10 +13,8 @@ android:id="@+id/v"
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
 
-        android:layout_width="377dp"
-        android:layout_height="510dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="65dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_weight="4.93"
         android:clickable="true"
         android:focusable="true"

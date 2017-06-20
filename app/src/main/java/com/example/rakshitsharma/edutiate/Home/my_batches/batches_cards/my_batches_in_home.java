@@ -1,9 +1,11 @@
 package com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -34,7 +36,7 @@ public class my_batches_in_home extends Fragment {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     public static ViewGroup v1;
-
+    public static CardView cv1;
     private RecyclerView.LayoutManager mLayoutManager;
     private static String LOG_TAG = "RecyclerViewActivity";
 
@@ -81,7 +83,7 @@ public class my_batches_in_home extends Fragment {
         // Inflate the layout for this fragment
         View v=inflater.inflate(R.layout.fragment_my_batches_in_home, container, false);
         mRecyclerView = (RecyclerView) v.findViewById(R.id.recycler_view);
-
+        cv1 = (CardView)v.findViewById(R.id.card_view);
         mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new my_batches_in_home_adapter(getDataSet());
@@ -106,10 +108,11 @@ public class my_batches_in_home extends Fragment {
         });
     }
 public static int index;
-    static int no_of_batches=5;
+    public static int no_of_batches=5;
     public static ArrayList names;
     public static ArrayList subjects;
     public static ArrayList descrip;
+    public static String col[] = new String[10];
     public static ArrayList institution;
     private ArrayList<my_batches_in_home_object> getDataSet() {
         ArrayList results = new ArrayList<my_batches_in_home_object>();
@@ -122,6 +125,17 @@ public static int index;
         institution.add("Institution: Edutiate");
         institution.add("Institution: Thapar");
         institution.add("Institution: COE-7");
+
+        col[0]="#c62828";
+        col[1]="#ad1457";
+        col[2]="#6a1b9a";
+        col[3]="#4527a0";
+        col[4]="#1565c0";
+        col[5]="#0277bd";
+        col[6]="#00695c";
+        col[7]="#2e7d32";
+        col[8]="#ef6c00";
+        col[9]="#4e342e";
 
         for(int i=0;i<no_of_batches;i++)
         {
@@ -140,6 +154,11 @@ public static int index;
 
         for (index = 0; index < no_of_batches; index++) {
             my_batches_in_home_object obj = new my_batches_in_home_object(names.get(index).toString(),institution.get(index).toString(),subjects.get(index).toString(),descrip.get(index).toString());
+
+
+
+
+
             results.add(index, obj);
         }
         return results;

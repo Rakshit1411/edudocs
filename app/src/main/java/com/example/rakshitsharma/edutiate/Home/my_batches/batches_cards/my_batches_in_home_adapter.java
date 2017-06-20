@@ -2,9 +2,11 @@ package com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.transition.Fade;
 import android.support.transition.TransitionManager;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -12,11 +14,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.amulyakhare.textdrawable.TextDrawable;
+import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.example.rakshitsharma.edutiate.R;
 import com.example.rakshitsharma.edutiate.Home.my_batches.batchdetailsactivity;
 
 import java.util.ArrayList;
+import java.util.Random;
 
+import static com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home.col;
+import static com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home.index;
+import static com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home.no_of_batches;
 import static com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home.v1;
 
 
@@ -31,12 +40,12 @@ public class my_batches_in_home_adapter extends RecyclerView
     private static String LOG_TAG = "my_batches_adapter";
     private ArrayList<my_batches_in_home_object> mDataset;
     private static my_batches_in_home_adapter.MyClickListener myClickListener;
-    private static CardView cv;
+    public static CardView cv;
     public static TextView institute;
 
     public static TextView subjects;
     public static TextView name_inBatch;
-
+    public static TextDrawable drawable1;
 
 
     public static class DataObjectHolder extends RecyclerView.ViewHolder
@@ -50,10 +59,19 @@ public static int title;
             subjects = (TextView) itemView.findViewById(R.id.subjects);
             name_inBatch = (TextView) itemView.findViewById(R.id.name_inBatch);
 
+            ColorGenerator generator = ColorGenerator.MATERIAL;
+            int randomColor = generator.getRandomColor();
+
+
 
             Log.i(LOG_TAG, "Adding Listener");
             // cv = (CardView)itemView.findViewById(R.id.card_view);
 
+           // cv.setCardBackgroundColor(Color.parseColor("#006064"));
+
+
+
+         //   itemView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(), R.color.purple));
             final String trans = itemView.getContext().getString(R.string.transition);
 
 //-------------Shared element------------
@@ -101,6 +119,11 @@ public static int title;
     public DataObjectHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.my_batch_card, parent, false);
+        cv = (CardView)view.findViewById(R.id.card_view);
+        ColorGenerator generator = ColorGenerator.MATERIAL;
+        int randomColor = generator.getRandomColor();
+        cv.setCardBackgroundColor(randomColor);
+
 
         DataObjectHolder dataObjectHolder = new DataObjectHolder(view);
         return dataObjectHolder;

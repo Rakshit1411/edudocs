@@ -3,6 +3,15 @@
 
     <item
         is-multidex="true"
+        jar="/home/rakshit/.android/build-cache/fef7ed5676d373307860aa9df6b0ca41baca2a34/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ee07783aa59eefdeacc107abf472f45f60272302">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ffe81d9a01cd37b794535238e8e4f8efab2ced37/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"

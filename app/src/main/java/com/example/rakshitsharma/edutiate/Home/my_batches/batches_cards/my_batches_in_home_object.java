@@ -13,6 +13,7 @@ public class my_batches_in_home_object {
     private String mText4;
 
 
+
     my_batches_in_home_object (String text1,String text2,String text3,String text4){
         mText1 = text1;
         mText2 = text2;
