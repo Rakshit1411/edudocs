@@ -3,6 +3,15 @@
 
     <item
         is-multidex="true"
+        jar="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="05c1ae75875547aea350197faa81a27b322fbe45">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_aa11b294602b441e191b098d8820b2086446324a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/rakshit/.android/build-cache/fef7ed5676d373307860aa9df6b0ca41baca2a34/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -12,12 +21,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/home/rakshit/.android/build-cache/ecd968f8f139810701a8b3f6cfd0d03f066a051d/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a5a246d38517a85f0689526323210c18c19f904c">
-        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_aa11b294602b441e191b098d8820b2086446324a/classes.dex" />
+        sha1="5a25890ba5b70ea20f4921e1fe7683449b03bd1c">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a9ca6899c4d4375a8a36dacb8ae2e6d5669a0e67/classes.dex" />
     </item>
     <item
         is-multidex="true"

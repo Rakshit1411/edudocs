@@ -73,6 +73,9 @@ dependencies {
     compile 'com.quickblox:quickblox-android-sdk-chat:3.3.0'
     compile 'com.quickblox:quickblox-android-sdk-core:3.3.0'
     compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+
+    compile 'com.cuboid:cuboidcirclebutton:1.0.3'
+
     testCompile 'junit:junit:4.12'
 }
 apply plugin: 'com.google.gms.google-services'

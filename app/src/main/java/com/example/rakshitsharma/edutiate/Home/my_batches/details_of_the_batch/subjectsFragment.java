@@ -123,7 +123,7 @@ public class subjectsFragment extends Fragment {
             if (mColumnCount <= 1) {
                 recyclerView.setLayoutManager(new LinearLayoutManager(context));
             } else {
-                recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
+                recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
             }
             recyclerView.setAdapter(adapter);
         }

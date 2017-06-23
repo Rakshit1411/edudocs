@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.rakshitsharma.edutiate.R;
 import com.example.rakshitsharma.edutiate.Settings.profile.about_me;
 import com.example.rakshitsharma.edutiate.Authentication.login;
+import com.example.rakshitsharma.edutiate.website;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.sendbird.android.SendBird;
@@ -115,10 +116,12 @@ public class settingsFragment extends Fragment {
             public void onClick(View v) {
                 View viewStart = v.findViewById(R.id.about_app);
                 v.setTransitionName("trans");
-                ActivityOptionsCompat options =
+              /*  ActivityOptionsCompat options =
                         ActivityOptionsCompat.makeSceneTransitionAnimation((Activity)getContext(), viewStart,v.getTransitionName());
                 Intent intent = new Intent(getContext(),about_the_team.class);
-                getContext().startActivity(intent,options.toBundle());
+                */
+              Intent intent = new Intent(getContext(),website.class);
+              getContext().startActivity(intent);
             }
         });
         profile.setOnClickListener(new View.OnClickListener() {
