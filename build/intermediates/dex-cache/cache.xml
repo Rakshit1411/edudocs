@@ -3,12 +3,93 @@
 
     <item
         is-multidex="true"
+        jar="/home/rakshit/.android/build-cache/bd6b81cf7f8edf0a66d7d7d771c6869a09c68387/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c09f95a59b57aaf2d70e11d7ade57d6d16c58245/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="00572d4b8ae37884c47b00f0d01b76678c5726f4">
+        sha1="8f5ef9d9f71b9e266e7f782b508ff86aa37aa7a9">
         <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_aa11b294602b441e191b098d8820b2086446324a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rakshit/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_3281fee28fd83f7c103a31bbd7dcd3c679806d13/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_cba6ab72f909530ae3877807070ce400c035fa5c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rakshit/.android/build-cache/1023e67de044a8dbfd987411abf2e85d442445ae/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bf06d7783597d18e4b809895fb22cc3924b1e99d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rakshit/.android/build-cache/d45fdd59adf04ba59f575d919af7dfa5dd30e351/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_154e81f5d7b96d782f3005eb6292aed7b2f574c0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rakshit/.android/build-cache/76560ca952e3a23c33ce1187b017426dfb27fda2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_1ce95e5f689e3070c6a38f60681d587fff2be61c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rakshit/.android/build-cache/847ce8cc35d1ac0ba8d41eb67ed5b36e6ac8ab19/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_75dd23188c52ed693058ba352670b0ce1e12f969/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rakshit/.android/build-cache/f916c06984f7c4d7b71ba79215dab8e83e6775dc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_80679210c2580345945cbc5b800c0db31546f881/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/rakshit/.android/build-cache/f07e1353ce821aaa6f54900910175ae59e92e2ed/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d859071f84dd0b1dd241ef4de52441512038a5b7/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -21,21 +102,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/rakshit/.android/build-cache/ecd968f8f139810701a8b3f6cfd0d03f066a051d/output/jars/classes.jar"
+        jar="/home/rakshit/.android/build-cache/fea3c62b9c303a85e716539bda99519eba625cc8/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="5a25890ba5b70ea20f4921e1fe7683449b03bd1c">
-        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a9ca6899c4d4375a8a36dacb8ae2e6d5669a0e67/classes.dex" />
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5d5eb3840f7963ba593fb61268189f639463a1e3/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/home/rakshit/.android/build-cache/8e6aa21360a44077fdcb27167ef2ee8540a81d9e/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_cba6ab72f909530ae3877807070ce400c035fa5c/classes.dex" />
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/media/rakshit/50DA087EDA086318/edutiate/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ef74a62ef171aa272bddd7e419866a814de381eb/classes.dex" />
     </item>
 
 </items>

@@ -33,7 +33,7 @@ public class startActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setTheme(R.style.AppTheme);
         // Checking for first time launch - before calling setContentView()
         prefManager = new prefmanager(this);
         if (!prefManager.isFirstTimeLaunch()) {
