@@ -22,7 +22,7 @@
     app:layout_constraintRight_toRightOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintVertical_bias="0.156"
-    tools:context="com.example.rakshitsharma.edutiate.Home.my_batches.details_of_the_batch.subjectsFragment"
+    tools:context="com.example.rakshitsharma.edutiate.Home.my_batches.details_of_the_batch.batch_subjects.subjectsFragment"
     tools:listitem="@layout/fragment_subjects">
 
 </android.support.v7.widget.RecyclerView>

@@ -9,13 +9,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.rakshitsharma.edutiate.Home.my_batches.batchdetailsactivity;
+import com.example.rakshitsharma.edutiate.Home.my_batches.details_of_the_batch.batch_announcement.batch_announcementFragment;
+import com.example.rakshitsharma.edutiate.Home.my_batches.details_of_the_batch.batch_subjects.subjectsFragment;
 import com.example.rakshitsharma.edutiate.R;
 
 public class batch_details_pager extends Fragment {
@@ -89,7 +88,7 @@ public class batch_details_pager extends Fragment {
                 {
                     mFragmentManager = getFragmentManager();
                     FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
-                    xfragmentTransaction.replace(R.id.framee,new subjectsFragment()).commit();
+                    xfragmentTransaction.replace(R.id.framee,new batch_announcementFragment()).commit();
                 }
                 else
                 {

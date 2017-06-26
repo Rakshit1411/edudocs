@@ -43,11 +43,11 @@
             android:label="About Us"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Home.my_batches.batchdetailsactivity"
+            android:name=".Home.my_batches.details_of_the_batch.batchdetailsactivity"
             android:icon="@drawable/add"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".each_subject_datail"
+            android:name=".subject_details.each_subject_datail"
             android:label="@string/title_activity_each_subject_datail"
             android:theme="@style/AppTheme1" />
         <activity

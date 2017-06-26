@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/AppTheme1"
-    tools:context="com.example.rakshitsharma.edutiate.Home.my_batches.batchdetailsactivity">
+    tools:context="com.example.rakshitsharma.edutiate.Home.my_batches.details_of_the_batch.batchdetailsactivity">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

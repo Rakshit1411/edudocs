@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.rakshitsharma.edutiate.each_subject_datail">
+    tools:context="com.example.rakshitsharma.edutiate.subject_details.each_subject_datail">
 
     <FrameLayout
         android:id="@+id/framie"

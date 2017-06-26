@@ -94,7 +94,7 @@ public class login extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
                         return;
                     }
-
+                    btnLogin.setVisibility(View.GONE);
                     progressBar.setVisibility(View.VISIBLE);
 
                     //authenticate user
@@ -115,10 +115,13 @@ public class login extends AppCompatActivity {
                                         } else {
                                             Toast.makeText(login.this, "Wrong Credentials", Toast.LENGTH_LONG).show();
                                         }
+                                        btnLogin.setVisibility(View.VISIBLE);
+
                                     }
                                     else if(!user.isEmailVerified())
                                     {
                                         inputEmail.setError("Your Account has not been verified");
+                                        btnLogin.setVisibility(View.VISIBLE);
                                     }
                                     else {
                                         QBUser qbUser = new QBUser(email,password);

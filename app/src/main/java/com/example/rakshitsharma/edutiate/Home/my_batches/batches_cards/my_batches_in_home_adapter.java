@@ -1,12 +1,9 @@
 package com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.transition.Fade;
 import android.support.transition.TransitionManager;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -18,14 +15,12 @@ import android.widget.TextView;
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.example.rakshitsharma.edutiate.R;
-import com.example.rakshitsharma.edutiate.Home.my_batches.batchdetailsactivity;
+import com.example.rakshitsharma.edutiate.Home.my_batches.details_of_the_batch.batchdetailsactivity;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 import static com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home.col;
-import static com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home.index;
-import static com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home.no_of_batches;
 import static com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home.v1;
 
 

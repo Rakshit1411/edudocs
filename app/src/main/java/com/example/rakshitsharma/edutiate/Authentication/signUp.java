@@ -29,7 +29,7 @@ import com.quickblox.users.model.QBUser;
 
 public class signUp extends AppCompatActivity {
     private EditText inputEmail, inputPassword,inputName;
-    private Button btnSignIn, btnSignUp, btnResetPassword;
+    private Button btnSignIn, btnSignUp;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
     public static FirebaseUser user;
@@ -49,15 +49,7 @@ public class signUp extends AppCompatActivity {
         inputName = (EditText) findViewById(R.id.name);
         inputPassword = (EditText) findViewById(R.id.password);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
 
-
-        btnResetPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), forgot_password.class));
-            }
-        });
 
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,33 +66,35 @@ public class signUp extends AppCompatActivity {
                 final String password = inputPassword.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
+                    Snackbar.make(getCurrentFocus(),"Enter e-mail address!",Snackbar.LENGTH_LONG).show();
                     return;
                 }
 
                 if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
+                    Snackbar.make(getCurrentFocus(),"Enter password!",Snackbar.LENGTH_LONG).show();
                     return;
                 }
 
-                if (password.length() < 6) {
-                    Toast.makeText(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
+                if (password.length() < 8) {
+                    Snackbar.make(getCurrentFocus(),"Password too short, enter minimum 6 characters!",Snackbar.LENGTH_LONG).show();
+
                     return;
                 }
-
+                btnSignUp.setVisibility(View.GONE);
                 progressBar.setVisibility(View.VISIBLE);
                 //create user
                 auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(signUp.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(signUp.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+                               // Toast.makeText(signUp.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
                                 progressBar.setVisibility(View.GONE);
+                                btnSignUp.setVisibility(View.VISIBLE);
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the
                                 // signed in user can be handled in the listener.
                                 if (!task.isSuccessful()) {
-                                    Snackbar.make(getCurrentFocus(),"Failed to create user:"+task.getException().getMessage(),Snackbar.LENGTH_INDEFINITE).show();
+                                    Snackbar.make(getCurrentFocus(),"Failed to create user:"+task.getException().getMessage(),Snackbar.LENGTH_LONG).show();
                                 } else {
                                     user = auth.getCurrentUser();
                                     user.sendEmailVerification().addOnCompleteListener(signUp.this, new OnCompleteListener<Void>() {
