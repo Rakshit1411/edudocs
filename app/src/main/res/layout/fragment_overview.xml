@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#dddddd"
     android:theme="@style/AppTheme1"
-    tools:context="com.example.rakshitsharma.edutiate.overview">
+    tools:context="com.example.rakshitsharma.edutiate.subject_details.overview">
 
     <!-- TODO: Update blank fragment layout -->
 

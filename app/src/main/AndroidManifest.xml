@@ -47,7 +47,7 @@
             android:icon="@drawable/add"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".subject_details.each_subject_datail"
+            android:name=".subject_details.each_subject_details"
             android:label="@string/title_activity_each_subject_datail"
             android:theme="@style/AppTheme1" />
         <activity
@@ -70,7 +70,7 @@
             android:name=".Chatting.ListUsersActivity"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".website"
+            android:name=".Settings.website"
             android:theme="@style/AppTheme1" />
     </application>
 

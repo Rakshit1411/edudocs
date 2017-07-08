@@ -1,27 +1,21 @@
 package com.example.rakshitsharma.edutiate.Settings;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.rakshitsharma.edutiate.R;
 import com.example.rakshitsharma.edutiate.Settings.profile.about_me;
 import com.example.rakshitsharma.edutiate.Authentication.login;
-import com.example.rakshitsharma.edutiate.website;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.sendbird.android.SendBird;
-import com.sendbird.android.SendBirdException;
 
 
 /**

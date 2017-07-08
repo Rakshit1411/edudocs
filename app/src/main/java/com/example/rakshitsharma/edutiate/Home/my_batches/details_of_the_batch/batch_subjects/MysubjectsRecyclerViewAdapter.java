@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import com.example.rakshitsharma.edutiate.Home.my_batches.details_of_the_batch.batch_subjects.dummy.DummyContent.DummyItem;
 import com.example.rakshitsharma.edutiate.R;
-import com.example.rakshitsharma.edutiate.subject_details.each_subject_datail;
+import com.example.rakshitsharma.edutiate.subject_details.each_subject_details;
 
 import java.util.List;
 
@@ -57,7 +57,7 @@ public static String list_sub_name;
                     v.setTransitionName("trans");
                     ActivityOptionsCompat options =
                             ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) v.getContext(), viewStart,v.getTransitionName());
-                    Intent intent = new Intent(v.getContext(), each_subject_datail.class);
+                    Intent intent = new Intent(v.getContext(), each_subject_details.class);
                     v.getContext().startActivity(intent,options.toBundle());
 
                 }
