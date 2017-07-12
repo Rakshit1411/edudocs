@@ -62,6 +62,8 @@ public class about_me extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
         cv.bringToFront();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         mStorageRef = FirebaseStorage.getInstance().getReference();
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
@@ -156,4 +158,9 @@ public class about_me extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
+    }
 }

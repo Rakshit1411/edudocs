@@ -1,6 +1,7 @@
 package com.example.rakshitsharma.edutiate.Authentication;
 
 import android.content.Intent;
+import android.database.DatabaseErrorHandler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,6 +16,8 @@ import android.widget.Toast;
 
 import com.example.rakshitsharma.edutiate.MainActivity;
 import com.example.rakshitsharma.edutiate.R;
+import com.example.rakshitsharma.edutiate.databasehandler;
+import com.example.rakshitsharma.edutiate.user;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -38,10 +41,9 @@ public class login extends AppCompatActivity {
     static final String AUTH_KEY= "bRLpxHfCm3hULSt";
     static final String AUTH_SECRET = "mSaSV4KzQnzgZh9";
     static final String ACCOUNT_KEY = "BpJLmNq9dj9XjL3JaWAY";
-    RadioButton typer;
     String email;
     public static String userType_login;
-
+    databasehandler db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +51,8 @@ public class login extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         initializeFramework();
         user=auth.getCurrentUser();
+        db = new databasehandler(this);
+
 
         if (auth.getCurrentUser() != null && user.isEmailVerified()) {
             startActivity(new Intent(login.this, MainActivity.class));
@@ -136,7 +140,7 @@ public class login extends AppCompatActivity {
 
                                             }
                                         });
-
+                                        db.addUser(new user(12345 ,"Rakshit", email , password));
                                         Intent intent = new Intent(login.this, MainActivity.class);
                                         intent.putExtra("email",email);
                                         intent.putExtra("password",password);

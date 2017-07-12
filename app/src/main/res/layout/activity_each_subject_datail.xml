@@ -33,7 +33,6 @@
         android:layout_gravity="bottom"
         android:background="?android:attr/windowBackground"
         android:theme="@style/AppTheme1"
-        app:menu="@menu/each_subject_bar"
-        />
+        app:menu="@menu/each_subject_bar" />
 
 </LinearLayout>

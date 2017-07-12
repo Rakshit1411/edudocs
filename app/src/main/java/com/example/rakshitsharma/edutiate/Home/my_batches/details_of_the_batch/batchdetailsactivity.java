@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.FrameLayout;
 
 import com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home;
 import com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home_adapter;
@@ -20,7 +21,8 @@ public class batchdetailsactivity extends AppCompatActivity implements subjectsF
 FragmentManager mFragmentManager;
     final Context c = this;
     String new_subject;
-
+    public static FrameLayout framee;
+    public static int w,h;
     public static ArrayList sub_names;
 
     @Override
@@ -29,7 +31,9 @@ FragmentManager mFragmentManager;
         setContentView(R.layout.activity_batchdetailsactivity);
         getSupportActionBar().setTitle(my_batches_in_home.names.get(my_batches_in_home_adapter.DataObjectHolder.title).toString());
         sub_names = new ArrayList<String>();
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setElevation(0);
         sub_names.add("UTA-002");
         sub_names.add("UCS-405");
         sub_names.add("UMA-003");

@@ -3,6 +3,7 @@ package com.example.rakshitsharma.edutiate;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -34,25 +35,32 @@ FrameLayout content1,content2,content3;
     FragmentManager mFragmentManager;
     FragmentTransaction mFragmentTransaction;
     public static ViewGroup v2;
-    int count=1;
+    int counta=0,countb=0,countc=0;
+    BottomNavigationView navigation;
+
     String user,password;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+
+
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                 {
+                    counta++;
                     Fade fade = new Fade();
                     fade.setDuration(300);
                     //TransitionManager.beginDelayedTransition(v2,fade);
+
 
                     FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
                     content1 = (FrameLayout)findViewById(R.id.content);
                     xfragmentTransaction.replace(R.id.content,new my_batches_in_home()).commit();
 
-                    if(Build.VERSION.SDK_INT >=21) {
+                    if(Build.VERSION.SDK_INT >=21 && counta!=1) {
                         // previously invisible view
 
 // get the center for the clipping circle
@@ -75,7 +83,7 @@ FrameLayout content1,content2,content3;
 
 
 
-                    count=1;
+
 
                     return true;
                 }
@@ -84,15 +92,15 @@ FrameLayout content1,content2,content3;
                 { Fade fade = new Fade();
                     fade.setDuration(500);
                   //  TransitionManager.beginDelayedTransition(v2,fade);
+                    countb++;
                     FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
                     content3 = (FrameLayout)findViewById(R.id.content);
                     xfragmentTransaction.replace(R.id.content,new settingsFragment()).commit();
-
-                    if(Build.VERSION.SDK_INT >=21) {
+                    if(Build.VERSION.SDK_INT >=21 && countb!=1) {
                         // previously invisible view
 
 // get the center for the clipping circle
-                        int cx = content3.getWidth() / 2;
+                        int cx = content3.getWidth();
                         int cy = content3.getHeight();
 
 // get the final radius for the clipping circle
@@ -110,24 +118,22 @@ FrameLayout content1,content2,content3;
                     }
 
 
-                    count=3;
-
                     return true;
                 }
                 case R.id.navigation_notifications:
                 { Fade fade = new Fade();
                     fade.setDuration(500);
 //                    TransitionManager.beginDelayedTransition(v2,fade);
+                    countc++;
                     FragmentTransaction xfragmentTransaction = mFragmentManager.beginTransaction();
 
                     content2 = (FrameLayout)findViewById(R.id.content);
                     xfragmentTransaction.replace(R.id.content,new notification()).commit();
-
-                    if(Build.VERSION.SDK_INT >=21) {
+                    if(Build.VERSION.SDK_INT >=21 && countc!=1) {
                         // previously invisible view
 
 // get the center for the clipping circle
-                        int cx = content2.getWidth();
+                        int cx = content2.getWidth()/2;
                         int cy = content2.getHeight();
 
 // get the final radius for the clipping circle
@@ -144,8 +150,6 @@ FrameLayout content1,content2,content3;
 
                     }
 
-
-                    count=2;
 
                     return true;
 
@@ -172,7 +176,8 @@ FrameLayout content1,content2,content3;
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.action_bar_icon);
         xfragmentTransaction.replace(R.id.content,new my_batches_in_home()).commit();
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation = (BottomNavigationView) findViewById(R.id.navigation);
+
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
     }

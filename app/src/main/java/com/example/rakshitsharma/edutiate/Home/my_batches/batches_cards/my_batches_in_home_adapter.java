@@ -1,7 +1,9 @@
 package com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards;
 
+import android.animation.Animator;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.support.transition.Fade;
 import android.support.transition.TransitionManager;
 import android.support.v7.widget.CardView;
@@ -9,7 +11,9 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.amulyakhare.textdrawable.TextDrawable;
@@ -22,6 +26,7 @@ import java.util.Random;
 
 import static com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home.col;
 import static com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home.v1;
+import static com.example.rakshitsharma.edutiate.Home.my_batches.details_of_the_batch.batchdetailsactivity.framee;
 
 
 /**
@@ -37,7 +42,6 @@ public class my_batches_in_home_adapter extends RecyclerView
     private static my_batches_in_home_adapter.MyClickListener myClickListener;
     public static CardView cv;
     public static TextView institute;
-
     public static TextView subjects;
     public static TextView name_inBatch;
     public static TextDrawable drawable1;
@@ -53,7 +57,6 @@ public static int title;
             institute = (TextView) itemView.findViewById(R.id.institute);
             subjects = (TextView) itemView.findViewById(R.id.subjects);
             name_inBatch = (TextView) itemView.findViewById(R.id.name_inBatch);
-
             ColorGenerator generator = ColorGenerator.MATERIAL;
             int randomColor = generator.getRandomColor();
 
@@ -84,9 +87,10 @@ public static int title;
                    //itemView.getContext().startActivity(intent,options.toBundle());
                     Fade fade = new Fade();
                     fade.setDuration(2000);
-                    TransitionManager.beginDelayedTransition(v1,fade);
+                   TransitionManager.beginDelayedTransition(v1,fade);
                     Intent intent = new Intent(itemView.getContext(),batchdetailsactivity.class);
                     itemView.getContext().startActivity(intent);
+
 
                     }
             });

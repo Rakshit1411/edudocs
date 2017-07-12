@@ -26,6 +26,7 @@ public class batch_details_pager extends Fragment {
     TabItem tab2;
     TabItem tab3;
 
+
     FragmentManager mFragmentManager;
     @Nullable
     @Override

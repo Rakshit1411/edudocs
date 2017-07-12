@@ -35,6 +35,7 @@ public class profile_card_adapter extends RecyclerView
                 super(itemView);
                 label = (TextView) itemView.findViewById(R.id.textView);
                 dateTime = (TextView) itemView.findViewById(R.id.textView2);
+
                 Log.i(LOG_TAG, "Adding Listener");
                 itemView.setOnClickListener(this);
             }
