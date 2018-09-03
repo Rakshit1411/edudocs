@@ -1,2 +1,2 @@
-# edutiate
-This is an app for EDUTIATE.
+# EduDocs
+This is an app for EduDocs.
