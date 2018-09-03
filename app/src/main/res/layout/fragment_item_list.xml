@@ -1,21 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<android.support.v7.widget.RecyclerView android:id="@+id/list"
-    android:name="com.example.rakshitsharma.edutiate.notification"
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list"
+    android:name="com.example.rakshitsharma.edutiate.ItemdocsFragment"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
-    android:layout_marginTop="16dp"
-    android:clickable="true"
-    android:focusable="true"
-    android:background="#ECEFF1"
-
-    android:visibility="visible"
-    tools:context="com.example.rakshitsharma.edutiate.notifications.notification"
-    tools:listitem="@layout/fragment_item"
-    android:layout_weight="4.93"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    </android.support.v7.widget.RecyclerView>
+    app:layoutManager="LinearLayoutManager"
+    tools:context="com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.teacher_of_batch.ItemdocsFragment"
+    tools:listitem="@layout/fragment_itemdocs" />

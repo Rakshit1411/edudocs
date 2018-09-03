@@ -1,5 +1,6 @@
 package com.example.rakshitsharma.edutiate.notifications;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,11 @@ import android.view.ViewGroup;
 import com.example.rakshitsharma.edutiate.R;
 import com.example.rakshitsharma.edutiate.notifications.DummyContent.DummyItem;
 
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.zip.Inflater;
+
 /**
  * A fragment representing a list of Items.
  * <p/>
@@ -27,6 +33,7 @@ public class notification extends Fragment {
     // TODO: Customize parameters
     private int mColumnCount = 1;
     private OnListFragmentInteractionListener mListener;
+    public static ProgressDialog pd;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -75,7 +82,11 @@ public class notification extends Fragment {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
             recyclerView.setAdapter(new MyItemRecyclerViewAdapter(DummyContent.ITEMS, mListener));
+
+            new MyItemRecyclerViewAdapter(DummyContent.ITEMS, mListener).notifyDataSetChanged();
         }
+
+
         return view;
     }
 

@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/logo_full_trasparent" />
+                app:srcCompat="@drawable/logo_final" />
         </FrameLayout>
 
         <android.support.v7.widget.RecyclerView

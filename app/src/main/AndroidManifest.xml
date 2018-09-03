@@ -3,9 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.rakshitsharma.edutiate">
 
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <meta-data
         android:name="android.support.VERSION"
@@ -31,25 +34,13 @@
             android:theme="@style/AppTheme1"
             android:uiOptions="splitActionBarWhenNarrow" />
         <activity
-            android:name=".Chatting.chat"
-            android:label="@string/title_activity_chat"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".Settings.profile.about_me"
             android:label="My Profile"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Settings.about_the_team"
             android:label="About Us"
             android:theme="@style/AppTheme" />
-        <activity
-            android:name=".Home.my_batches.details_of_the_batch.batchdetailsactivity"
-            android:icon="@drawable/add"
-            android:theme="@style/AppTheme1" />
-        <activity
-            android:name=".subject_details.each_subject_details"
-            android:label="@string/title_activity_each_subject_datail"
-            android:theme="@style/AppTheme1" />
         <activity
             android:name=".Authentication.login"
             android:theme="@style/logintheme" />
@@ -59,19 +50,59 @@
         <activity
             android:name=".Authentication.forgot_password"
             android:theme="@style/logintheme" />
-        <activity android:name=".Chatting.chat_window" />
         <activity
             android:name=".Authentication.verification"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".Chatting.ChatDialogsActivity"
-            android:theme="@style/AppTheme1" />
-        <activity
-            android:name=".Chatting.ListUsersActivity"
-            android:theme="@style/AppTheme1" />
-        <activity
             android:name=".Settings.website"
             android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".GetAllData.loadingData1"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Home.my_batches.batches_cards.teacher_of_batch.NsubjectDocumentsActivity"
+            android:label="@string/title_activity_nsubject_documents"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".GetAllData.loadingData2"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".noInternetConnection" />
+        <activity
+            android:name=".checker"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".Teacher.teacher_login"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".Teacher.teacher_main"
+            android:label="EduDocs"
+            android:theme="@style/AppTheme1"
+            android:uiOptions="splitActionBarWhenNarrow" />
+        <activity
+            android:name=".Teacher.teacher_loadingData1"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Teacher.teacherView_Details_of_Batch"
+            android:label="@string/title_activity_teacher_view__details_of__batch"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Teacher.about_teacher_me"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Teacher.teacherView_Details_of_Batch_noAttendance"
+            android:label="@string/title_activity_teacher_view__details_of__batch_no_attendance"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".Teacher.teacher_loadingData2"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".BottomSheet"
+            android:theme="@style/AppTheme1" />
+
+        <service
+            android:name=".noti"
+            android:enabled="true"
+            android:exported="true"></service>
     </application>
 
 </manifest>

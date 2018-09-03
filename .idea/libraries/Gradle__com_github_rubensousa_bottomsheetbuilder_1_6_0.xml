@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.rubensousa:bottomsheetbuilder-1.6.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/bottomsheetbuilder-1.6.0.aar/a01086ecb464e33b9a99106c55915fac/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/bottomsheetbuilder-1.6.0.aar/a01086ecb464e33b9a99106c55915fac/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.rubensousa/bottomsheetbuilder/1.6.0/ac502068d140101afbe367c9ffa355301f73a4b6/bottomsheetbuilder-1.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

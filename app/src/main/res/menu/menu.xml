@@ -3,12 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_refresh"
-        android:icon="@android:drawable/sym_action_chat"
+        android:id="@+id/action_close"
         android:orderInCategory="100"
-
-        android:title="chat"
-        app:showAsAction="always" />
-
+        android:title="Close"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_close_white_24dp"/>
 
 </menu>

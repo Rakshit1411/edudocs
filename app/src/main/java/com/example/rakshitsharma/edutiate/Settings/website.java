@@ -53,7 +53,7 @@ public class website extends AppCompatActivity {
         wb.canGoForward();
 
         wb.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
-        wb.loadUrl("https://www.edutiate.com/");
+        wb.loadUrl("https://edudocs.xyz");
         progressBar.setProgress(0);
 
     }

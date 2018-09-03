@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: in.arjsna:cablib-0.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cablib-0.0.1.aar/55dc2bc42c80f44c5358f326d1246848/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cablib-0.0.1.aar/55dc2bc42c80f44c5358f326d1246848/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/in.arjsna/cablib/0.0.1/bc792cd1d48a1a72ddeaacafc6ca07bfd8658f55/cablib-0.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

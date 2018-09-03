@@ -35,4 +35,9 @@ Button loginback;
             }
         });
     }
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(),login.class));
+        finish();
+    }
 }

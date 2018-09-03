@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.michael-rapp:android-material-views-2.1.4">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-material-views-2.1.4.aar/d5ca94a2717c9aae1c5947d2b71514a9/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/android-material-views-2.1.4.aar/d5ca94a2717c9aae1c5947d2b71514a9/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.michael-rapp/android-material-views/2.1.4/9661b9013b6382d7f88f47dc8062a065c84619e2/android-material-views-2.1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

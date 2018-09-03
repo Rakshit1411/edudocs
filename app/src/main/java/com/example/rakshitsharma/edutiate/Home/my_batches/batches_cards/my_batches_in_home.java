@@ -11,20 +11,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.rakshitsharma.edutiate.R;
+import com.example.rakshitsharma.edutiate.GetAllData.loadingData1;
 
 import java.util.ArrayList;
 
-
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link my_batches_in_home.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link my_batches_in_home#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class my_batches_in_home extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,25 +29,16 @@ public class my_batches_in_home extends Fragment {
     public static CardView cv1;
     private RecyclerView.LayoutManager mLayoutManager;
     private static String LOG_TAG = "RecyclerViewActivity";
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    public static my_batches_in_home_object obj;
     private OnFragmentInteractionListener mListener;
 
     public my_batches_in_home() {
         // Required empty public constructorfinal
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment my_batches_in_home.
-     */
     // TODO: Rename and change types and number of parameters
     public static my_batches_in_home newInstance(String param1, String param2) {
         my_batches_in_home fragment = new my_batches_in_home();
@@ -85,9 +69,7 @@ public class my_batches_in_home extends Fragment {
         mRecyclerView.setLayoutManager(mLayoutManager);
         mAdapter = new my_batches_in_home_adapter(getDataSet());
         mRecyclerView.setAdapter(mAdapter);
-
         v1 = (ViewGroup)v.findViewById(R.id.recycler_view);
-
         return v;
     }
 
@@ -105,24 +87,9 @@ public class my_batches_in_home extends Fragment {
         });
     }
 public static int index;
-    public static int no_of_batches=5;
-    public static ArrayList names;
-    public static ArrayList subjects;
-    public static ArrayList descrip;
     public static String col[] = new String[17];
-    public static ArrayList institution;
     private ArrayList<my_batches_in_home_object> getDataSet() {
         ArrayList results = new ArrayList<my_batches_in_home_object>();
-        names = new ArrayList<String>();
-        subjects = new ArrayList<String>();
-        descrip = new ArrayList<String>();
-        institution = new ArrayList<String>();
-        institution.add("Institution: Thapar");
-        institution.add("Institution: COE-7");
-        institution.add("Institution: Edutiate");
-        institution.add("Institution: Thapar");
-        institution.add("Institution: COE-7");
-
         col[0]="#955170";
         col[1]="#43698f";
         col[2]="#48A360";
@@ -140,32 +107,13 @@ public static int index;
         col[14]="#575D80";
         col[15]="#5A6ABA";
         col[16]="#A68572";
-
-
-        for(int i=0;i<no_of_batches;i++)
-        {
-            subjects.add("Subjects: 5");
-        }
-        names.add("LAB");
-        names.add("Tutorial");
-        names.add("Morning");
-        names.add("Evening");
-        names.add("C++");
-        descrip.add("Description: Data Structures LAB");
-        descrip.add("Description: Free Tutorials On android,JS");
-        descrip.add("Description: Training Sessions");
-        descrip.add("Description: Brainstorming Sessions");
-        descrip.add("Description: Improve your Coding skills");
-
-        for (index = 0; index < no_of_batches; index++) {
-            my_batches_in_home_object obj = new my_batches_in_home_object(names.get(index).toString(),institution.get(index).toString(),subjects.get(index).toString(),descrip.get(index).toString());
-
-
-
-
-
+        //Toast.makeText(getActivity(),"Total size final : "+ loadingData1.Teacher.size(),Toast.LENGTH_SHORT).show();
+        for (index = 0; index < loadingData1.Teacher.size(); index++) {
+            my_batches_in_home_object obj = new my_batches_in_home_object(loadingData1.subName.get(index).toString(), loadingData1.subCode.get(index).toString(), loadingData1.Teacher.get(index).toString(),"dsadsadsadsad");
             results.add(index, obj);
         }
+        index=-1;
+
         return results;
     }
 

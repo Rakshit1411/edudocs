@@ -1,5 +1,7 @@
 package com.example.rakshitsharma.edutiate.notifications;
 
+import com.example.rakshitsharma.edutiate.GetAllData.loadingData1;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,7 +25,7 @@ public class DummyContent {
      */
     public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
 
-    private static final int COUNT = 10;
+    private static final int COUNT = loadingData1.all_doc_postText.size();
 
     static {
         // Add some sample items.

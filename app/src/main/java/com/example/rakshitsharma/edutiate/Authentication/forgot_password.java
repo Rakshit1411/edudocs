@@ -1,5 +1,6 @@
 package com.example.rakshitsharma.edutiate.Authentication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,8 @@ import com.example.rakshitsharma.edutiate.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+
+import es.dmoral.toasty.Toasty;
 
 /**
  * Created by Rakshit Sharma on 5/24/2017.
@@ -38,6 +41,7 @@ public class forgot_password extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),login.class));
                 finish();
             }
         });
@@ -49,7 +53,7 @@ public class forgot_password extends AppCompatActivity {
                 String email = inputEmail.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(getApplication(), "Enter your registered email id", Toast.LENGTH_SHORT).show();
+                    Toasty.success(forgot_password.this, "Enter your registered email id", Toast.LENGTH_SHORT, true).show();
                     return;
                 }
 
@@ -59,9 +63,9 @@ public class forgot_password extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(forgot_password.this, "We have sent you instructions to reset your password!", Toast.LENGTH_SHORT).show();
+                                    Toasty.success(forgot_password.this, "We have sent you instructions to reset your password!", Toast.LENGTH_SHORT, true).show();
                                 } else {
-                                    Toast.makeText(forgot_password.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
+                                    Toasty.success(forgot_password.this, "Failed to send reset email!", Toast.LENGTH_SHORT, true).show();
                                 }
 
                                 progressBar.setVisibility(View.GONE);
@@ -70,5 +74,11 @@ public class forgot_password extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(getApplicationContext(),login.class));
+        finish();
     }
 }

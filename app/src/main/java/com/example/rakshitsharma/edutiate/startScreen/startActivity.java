@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.example.rakshitsharma.edutiate.R;
 import com.example.rakshitsharma.edutiate.Authentication.login;
+import com.example.rakshitsharma.edutiate.checker;
 
 public class startActivity extends AppCompatActivity {
     private ViewPager viewPager;
@@ -120,7 +121,7 @@ public class startActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(startActivity.this, login.class));
+        startActivity(new Intent(startActivity.this, checker.class));
         finish();
     }
 

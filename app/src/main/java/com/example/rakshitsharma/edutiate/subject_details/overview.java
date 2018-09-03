@@ -7,10 +7,13 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home_adapter;
 import com.example.rakshitsharma.edutiate.R;
-
-import in.championswimmer.sfg.lib.SimpleFingerGestures;
+import com.example.rakshitsharma.edutiate.GetAllData.loadingData1;
+import com.squareup.picasso.Picasso;
 
 
 /**
@@ -29,7 +32,9 @@ public class overview extends Fragment {
 
     // TODO: Rename and change types of parameters
     private String mParam1;
+    ImageView teacherImage;
     private String mParam2;
+    TextView tname,email,phone,room;
 
     private OnFragmentInteractionListener mListener;
 
@@ -70,7 +75,19 @@ public class overview extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_overview, container, false);
 
+        teacherImage = (ImageView)view.findViewById(R.id.teacherView);
+        //Picasso.with(getActivity()).load(userCredentials.getString("image")).into(teacherImage);
+        tname = (TextView)view.findViewById(R.id.teacher_name);
+        email = (TextView)view.findViewById(R.id.email);
+        phone = (TextView)view.findViewById(R.id.phone);
+        room = (TextView)view.findViewById(R.id.room);
+        email.setText("Email : "+ loadingData1.Teacher_email.get(my_batches_in_home_adapter.cardNumber));
+        phone.setText("Phone No : "+ loadingData1.Teacher_phone.get(my_batches_in_home_adapter.cardNumber));
+        room.setText("Room No : "+ loadingData1.Teacher_room.get(my_batches_in_home_adapter.cardNumber));
 
+        tname.setText(""+ loadingData1.Teacher.get(my_batches_in_home_adapter.cardNumber));
+        if(loadingData1.Teacher_image.get(my_batches_in_home_adapter.cardNumber).toString()!="null")
+            Picasso.with(getActivity()).load(loadingData1.Teacher_image.get(my_batches_in_home_adapter.cardNumber).toString()).into(teacherImage);
 
         return view;
     }

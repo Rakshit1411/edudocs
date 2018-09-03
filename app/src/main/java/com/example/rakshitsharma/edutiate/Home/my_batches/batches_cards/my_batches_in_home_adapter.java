@@ -1,9 +1,8 @@
 package com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards;
 
-import android.animation.Animator;
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.support.transition.Fade;
 import android.support.transition.TransitionManager;
 import android.support.v7.widget.CardView;
@@ -11,22 +10,20 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
 import com.example.rakshitsharma.edutiate.R;
-import com.example.rakshitsharma.edutiate.Home.my_batches.details_of_the_batch.batchdetailsactivity;
+import com.example.rakshitsharma.edutiate.GetAllData.loadingData1;
+import com.example.rakshitsharma.edutiate.GetAllData.loadingData2;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 import static com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home.col;
 import static com.example.rakshitsharma.edutiate.Home.my_batches.batches_cards.my_batches_in_home.v1;
-import static com.example.rakshitsharma.edutiate.Home.my_batches.details_of_the_batch.batchdetailsactivity.framee;
 
 
 /**
@@ -38,58 +35,50 @@ public class my_batches_in_home_adapter extends RecyclerView
         .DataObjectHolder>  {
 
     private static String LOG_TAG = "my_batches_adapter";
-    private ArrayList<my_batches_in_home_object> mDataset;
+    public static ArrayList<my_batches_in_home_object> mDataset;
     private static my_batches_in_home_adapter.MyClickListener myClickListener;
     public static CardView cv;
-    public static TextView institute;
-    public static TextView subjects;
-    public static TextView name_inBatch;
+    public static TextView subCode;
+    public static TextView subName;
+    public static int cardNumber;
+    public static TextView Teacher;
     public static TextDrawable drawable1;
-
+    public static int indexer;
+    public static String title_subject;
+    public static int title;
 
     public static class DataObjectHolder extends RecyclerView.ViewHolder
             implements View
             .OnClickListener {
 
-public static int title;
         public DataObjectHolder(final View itemView) {
             super(itemView);
-            institute = (TextView) itemView.findViewById(R.id.institute);
-            subjects = (TextView) itemView.findViewById(R.id.subjects);
-            name_inBatch = (TextView) itemView.findViewById(R.id.name_inBatch);
+            subCode = (TextView) itemView.findViewById(R.id.subCode);
+            subName = (TextView) itemView.findViewById(R.id.subjectName);
+            Teacher = (TextView) itemView.findViewById(R.id.Teacher);
             ColorGenerator generator = ColorGenerator.MATERIAL;
             int randomColor = generator.getRandomColor();
 
 
 
             Log.i(LOG_TAG, "Adding Listener");
-            // cv = (CardView)itemView.findViewById(R.id.card_view);
-
-           // cv.setCardBackgroundColor(Color.parseColor("#006064"));
-
-
-
-         //   itemView.setBackgroundColor(ContextCompat.getColor(itemView.getContext(), R.color.purple));
             final String trans = itemView.getContext().getString(R.string.transition);
 
 //-------------Shared element------------
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                  //  View viewStart = itemView.findViewById(R.id.card_view);
+
                     title=getAdapterPosition();
-
-                    //v.setTransitionName("trans");
-
-                    //ActivityOptionsCompat options =
-                      //      ActivityOptionsCompat.makeSceneTransitionAnimation((Activity)itemView.getContext(), viewStart,v.getTransitionName());
-                    //Intent intent = new Intent(itemView.getContext(),batchdetailsactivity.class);
-                   //itemView.getContext().startActivity(intent,options.toBundle());
-                    Fade fade = new Fade();
+                      Fade fade = new Fade();
                     fade.setDuration(2000);
-                   TransitionManager.beginDelayedTransition(v1,fade);
-                    Intent intent = new Intent(itemView.getContext(),batchdetailsactivity.class);
+                    cardNumber = getLayoutPosition();
+                    title_subject = loadingData1.subName.get(getLayoutPosition()).toString();
+                    TransitionManager.beginDelayedTransition(v1,fade);
+                    Intent intent = new Intent(itemView.getContext(),loadingData2.class);
+                    intent.putExtra("viewNumber",getLayoutPosition());
                     itemView.getContext().startActivity(intent);
+                   // ((Activity)itemView.getContext()).finish();
 
 
                     }
@@ -102,7 +91,6 @@ public static int title;
         public void onClick(View v) {
 
             myClickListener.onItemClick(getAdapterPosition(), v);
-            //pos=getAdapterPosition();
         }
     }
 
@@ -124,7 +112,12 @@ public static int title;
         Random rand = new Random();
         int x = rand.nextInt(17);
         cv.setCardBackgroundColor(Color.parseColor(col[x]));
-
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((Activity)view.getContext()).finish();
+            }
+        });
 
         DataObjectHolder dataObjectHolder = new DataObjectHolder(view);
         return dataObjectHolder;
@@ -133,9 +126,10 @@ public static int title;
 
     @Override
     public void onBindViewHolder(DataObjectHolder holder, int position) {
-        institute.setText(mDataset.get(position).getmText1());
-        name_inBatch.setText(mDataset.get(position).getmText2());
-        subjects.setText(mDataset.get(position).getmText3());
+        subName.setText(mDataset.get(position).getmText1());
+        subCode.setText(mDataset.get(position).getmText2());
+        Teacher.setText(mDataset.get(position).getmText3());
+        indexer = position;
 
 
 

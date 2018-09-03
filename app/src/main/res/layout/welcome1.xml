@@ -16,7 +16,7 @@
             android:layout_width="248dp"
             android:layout_height="@dimen/img_width_height"
             android:layout_weight="0.80"
-            android:src="@drawable/logo_original_compressed_more_new" />
+            android:src="@drawable/logo_final" />
 
         <TextView
             android:layout_width="wrap_content"
